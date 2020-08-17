@@ -1,9 +1,8 @@
 package pl.coderslab.model;
 
 import javax.persistence.*;
-import java.time.LocalDate;
 import java.time.LocalDateTime;
-import java.time.LocalTime;
+import java.util.List;
 
 @Entity
 @Table(name = "articles")
@@ -14,9 +13,11 @@ public class Article {
     private Long id;
     @Column(length = 200)
     private String title;
-
-    private String author;
-    private String categories;
+    @ManyToOne
+    @JoinColumn(name="id_author")
+    private Author author;
+    @ManyToMany
+    private List<Category> categories;
     private String content;
     private LocalDateTime created;
     private LocalDateTime updated;
