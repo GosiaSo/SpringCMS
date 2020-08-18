@@ -12,7 +12,7 @@
     <title>Title</title>
 </head>
 <body>
-<h4>Czy na pewno chcesz usunąć książkę?</h4>
+<h4>Czy na pewno chcesz usunąć kategorię?</h4>
 <a href='<c:url value="/category/remove/${category.getId()}"/>'>TAK, USUŃ</a>
 <br>
 <a href='<c:url value="/categoryList"/>'>NIE, COFNIJ</a>
