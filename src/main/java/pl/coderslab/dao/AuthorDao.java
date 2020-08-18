@@ -32,5 +32,9 @@ public class AuthorDao {
         Query query = entityManager.createQuery("SELECT a FROM Author a");
         return query.getResultList();
     }
+
+    public Author findById(Long id){
+        return entityManager.find(Author.class, id);
+    }
 }
 
