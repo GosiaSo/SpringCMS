@@ -42,7 +42,7 @@ public class AuthorController {
         model.addAttribute("author", byId);
         return "authorForm";
     }
-    @GetMapping("/author/edit/{id}")
+    @PostMapping("/author/edit/{id}")
     public String editAuthor(Author author){
         authorDao.update(author);
         return "redirect:/authorList";

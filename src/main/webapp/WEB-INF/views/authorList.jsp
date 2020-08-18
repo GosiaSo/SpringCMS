@@ -23,7 +23,7 @@
     <c:forEach items="${authors}" var="author">
         <tr>
             <td>${author.firstName}</td>
-            <td>${author.Lastname}</td>
+            <td>${author.lastName}</td>
             <td> <a href='<c:url value="/author/edit/${author.getId()}"/>'>Edit</a> </td>
             <td> <a href='<c:url value="/author/confirm/${author.getId()}"/>'>Delete</a> </td>
         </tr>
