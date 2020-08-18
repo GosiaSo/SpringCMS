@@ -50,6 +50,13 @@ public class CategoryController {
     }
 
     //usuwanie:
+    @GetMapping("/category/confirm/{id}")
+    public String deleteCategory(Model model, @PathVariable Long id){
+        Category byId = categoryDao.findById(id);
+        model.addAttribute("category", byId);
+        return "categoryConfirm";
+    }
+
     @GetMapping("/category/remove/{id}")
     public String deleteCategory(@PathVariable Long id){
         categoryDao.delete(categoryDao.findById(id));

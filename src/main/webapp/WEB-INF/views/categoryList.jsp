@@ -25,7 +25,7 @@
             <td>${category.name}</td>
             <td>${category.description}</td>
             <td> <a href='<c:url value="/category/edit/${category.getId()}"/>'>Edit</a> </td>
-            <td> <a href='<c:url value="/category/remove/${category.getId()}"/>'>Delete</a> </td>
+            <td> <a href='<c:url value="/category/confirm/${category.getId()}"/>'>Delete</a> </td>
         </tr>
     </c:forEach>
     </thead>
