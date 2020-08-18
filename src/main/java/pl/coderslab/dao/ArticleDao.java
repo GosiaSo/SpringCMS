@@ -32,4 +32,9 @@ public class ArticleDao {
         Query query = entityManager.createQuery("SELECT a FROM Article a");
         return query.getResultList();
     }
+
+    public List<Article> findFiveArticles(){
+        Query query = entityManager.createQuery("SELECT a FROM Article a ORDER BY a.created DESC");
+        return query.setMaxResults(5).getResultList();
+    }
 }

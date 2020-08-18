@@ -39,7 +39,7 @@ public class AppConfig implements WebMvcConfigurer {
     public LocalEntityManagerFactoryBean entityManagerFactory() {
         LocalEntityManagerFactoryBean entityManagerFactoryBean
                 = new LocalEntityManagerFactoryBean();
-        entityManagerFactoryBean.setPersistenceUnitName("dbgosia");
+        entityManagerFactoryBean.setPersistenceUnitName("springCMS");
         return entityManagerFactoryBean;
     }
     @Bean
