@@ -6,6 +6,8 @@ import pl.coderslab.model.Article;
 
 import javax.persistence.EntityManager;
 import javax.persistence.PersistenceContext;
+import javax.persistence.Query;
+import java.util.List;
 
 @Repository
 @Transactional
@@ -24,5 +26,10 @@ public class ArticleDao {
 
     public void update(Article article) {
         entityManager.merge(article);
+    }
+
+    public List<Article> findAll(){
+        Query query = entityManager.createQuery("SELECT a FROM Article a");
+        return query.getResultList();
     }
 }
