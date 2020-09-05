@@ -1,6 +1,8 @@
 package pl.coderslab.model;
 
 import javax.persistence.*;
+import javax.validation.constraints.NotEmpty;
+import javax.validation.constraints.Size;
 import java.time.LocalDateTime;
 import java.util.List;
 
@@ -12,12 +14,15 @@ public class Article {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
     @Column(length = 200)
+    @Size(min = 1, max = 200)
     private String title;
     @ManyToOne
     @JoinColumn(name="id_author")
     private Author author;
     @ManyToMany
+    @NotEmpty
     private List<Category> categories;
+    @Size(min = 1, max = 500)
     private String content;
     private LocalDateTime created;
     private LocalDateTime updated;
