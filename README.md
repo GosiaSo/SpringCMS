@@ -1,5 +1,5 @@
 # SpringCMS
-
+A quick, simple project to exercise Spring WebMVC and DAO
 
 ### Technologies
 Project is created with:
